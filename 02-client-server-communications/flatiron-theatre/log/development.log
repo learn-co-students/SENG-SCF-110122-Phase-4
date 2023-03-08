@@ -102,3 +102,665 @@ puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.5) lib/puma/server.rb:443:in `process_client'
 puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-03-07 12:52:19 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230307173336_create_productions.rb
+
+
+):
+  
+activerecord (6.1.7.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.7.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.7.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.7.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.7.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+railties (6.1.7.2) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-03-07 12:52:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230307173336_create_productions.rb
+
+
+):
+  
+activerecord (6.1.7.2) lib/active_record/migration.rb:625:in `check_pending!'
+activerecord (6.1.7.2) lib/active_record/migration.rb:590:in `block (2 levels) in call'
+activesupport (6.1.7.2) lib/active_support/evented_file_update_checker.rb:59:in `execute'
+activerecord (6.1.7.2) lib/active_record/migration.rb:595:in `block in call'
+activerecord (6.1.7.2) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.7.2) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+railties (6.1.7.2) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProductions (20230307173336)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "productions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "genre" varchar, "description" text, "budget" float, "image" varchar, "director" varchar, "ongoing" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230307173336"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-07 17:53:09.730219"], ["updated_at", "2023-03-07 17:53:09.730219"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-03-07 12:53:21 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shelbytalbert/.rvm/gems/ruby-2.7.4/gems/railties-6.1.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shelbytalbert/.rvm/gems/ruby-2.7.4/gems/railties-6.1.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.3ms | Allocations: 343)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 1832)
+
+
+Started GET "/productions" for ::1 at 2023-03-07 12:53:25 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ProductionsController):
+  
+actionpack (6.1.7.2) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.7.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.6.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+railties (6.1.7.2) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-03-07 12:53:45 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shelbytalbert/.rvm/gems/ruby-2.7.4/gems/railties-6.1.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shelbytalbert/.rvm/gems/ruby-2.7.4/gems/railties-6.1.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.8ms | Allocations: 178)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 793)
+
+
+Started GET "/" for ::1 at 2023-03-07 14:47:08 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shelbytalbert/.rvm/gems/ruby-2.7.4/gems/railties-6.1.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shelbytalbert/.rvm/gems/ruby-2.7.4/gems/railties-6.1.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.3ms | Allocations: 343)
+Completed 200 OK in 17ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 1832)
+
+
+Started GET "/productinos" for ::1 at 2023-03-07 14:47:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/productinos"):
+  
+Started GET "/productions" for ::1 at 2023-03-07 14:47:18 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ProductionsController):
+  
+actionpack (6.1.7.2) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.7.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.6.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+railties (6.1.7.2) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/productions" for ::1 at 2023-03-07 14:47:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/productions"):
+  
+Started GET "/hello_world" for ::1 at 2023-03-07 15:01:17 -0500
+Processing by ApplicationController#hello as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 142)
+
+
+Started GET "/" for ::1 at 2023-03-07 15:58:11 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shelbytalbert/.rvm/gems/ruby-2.7.4/gems/railties-6.1.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shelbytalbert/.rvm/gems/ruby-2.7.4/gems/railties-6.1.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.9ms | Allocations: 343)
+Completed 200 OK in 16ms (Views: 11.6ms | ActiveRecord: 0.0ms | Allocations: 1832)
+
+
+Started GET "/productions" for ::1 at 2023-03-07 15:58:16 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ProductionsController
+Did you mean?  create):
+  
+actionpack (6.1.7.2) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.7.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.7.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.7.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.7.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.7.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.7.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.7.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.7.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.6.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.7.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.7.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.7.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.7.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.7.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.7.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.6.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.7.2) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+railties (6.1.7.2) lib/rails/engine.rb:539:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/productions" for ::1 at 2023-03-07 15:59:00 -0500
+Processing by ProductionsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/productions_controller.rb:4:in `index'
+  [1m[36mProduction Load (0.7ms)[0m  [1m[34mSELECT "productions".* FROM "productions"[0m
+  ↳ app/controllers/productions_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 1.2ms | Allocations: 1602)
+
+
+Started POST "/admin/productions" for 127.0.0.1 at 2023-03-07 15:59:11 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/admin/productions"):
+  
+Started POST "/productions" for 127.0.0.1 at 2023-03-07 15:59:39 -0500
+Processing by ProductionsController#create as HTML
+  Parameters: {"title"=>"Moulin Rouge", "genre"=>"musical", "director"=>"Baz Lurman", "description"=>"Musical Adaptation of the Movie", "budget"=>3000000.0, "image"=>"https://images.ctfassets.net/6pezt69ih962/5tfNvRGcNoGE95M5NucboG/89056af5ce3667d2eac68feabe5d45ba/MR-1200-121121.jpg?h=550&fm=jpg", "production"=>{"title"=>"Moulin Rouge", "genre"=>"musical", "description"=>"Musical Adaptation of the Movie", "budget"=>3000000.0, "image"=>"https://images.ctfassets.net/6pezt69ih962/5tfNvRGcNoGE95M5NucboG/89056af5ce3667d2eac68feabe5d45ba/MR-1200-121121.jpg?h=550&fm=jpg", "director"=>"Baz Lurman"}}
+[31mUnpermitted parameter: :production[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/productions_controller.rb:8:in `create'
+  [1m[36mProduction Create (2.0ms)[0m  [1m[32mINSERT INTO "productions" ("title", "genre", "description", "budget", "image", "director", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Moulin Rouge"], ["genre", "musical"], ["description", "Musical Adaptation of the Movie"], ["budget", 3000000.0], ["image", "https://images.ctfassets.net/6pezt69ih962/5tfNvRGcNoGE95M5NucboG/89056af5ce3667d2eac68feabe5d45ba/MR-1200-121121.jpg?h=550&fm=jpg"], ["director", "Baz Lurman"], ["created_at", "2023-03-07 20:59:39.731460"], ["updated_at", "2023-03-07 20:59:39.731460"]]
+  ↳ app/controllers/productions_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/productions_controller.rb:8:in `create'
+Completed 201 Created in 19ms (Views: 0.4ms | ActiveRecord: 5.2ms | Allocations: 6576)
+
+
+Started GET "/productions" for ::1 at 2023-03-07 15:59:42 -0500
+Processing by ProductionsController#index as HTML
+  [1m[36mProduction Load (0.2ms)[0m  [1m[34mSELECT "productions".* FROM "productions"[0m
+  ↳ app/controllers/productions_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 769)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mProduction Load (0.2ms)[0m  [1m[34mSELECT "productions".* FROM "productions" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mProduction Load (0.3ms)[0m  [1m[34mSELECT "productions".* FROM "productions" ORDER BY "productions"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduction Destroy (3.2ms)[0m  [1m[31mDELETE FROM "productions" WHERE "productions"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "productions"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "productions"[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (2.8ms)[0m  [1m[31mDELETE FROM "productions"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduction Create (2.4ms)[0m  [1m[32mINSERT INTO "productions" ("title", "genre", "description", "budget", "image", "director", "ongoing", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hamlet"], ["genre", "Drama"], ["description", "The Tragedy of Hamlet, Prince of Denmark"], ["budget", 100000.0], ["image", "https://upload.wikimedia.org/wikipedia/commons/6/6a/Edwin_Booth_Hamlet_1870.jpg"], ["director", "Bill Shakespeare"], ["ongoing", 1], ["created_at", "2023-03-07 23:20:36.007287"], ["updated_at", "2023-03-07 23:20:36.007287"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduction Create (0.6ms)[0m  [1m[32mINSERT INTO "productions" ("title", "genre", "description", "budget", "image", "director", "ongoing", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Cats"], ["genre", "Musical"], ["description", " Jellicles cats sing and dance"], ["budget", 200000.0], ["image", "https://upload.wikimedia.org/wikipedia/en/3/3e/CatsMusicalLogo.jpg"], ["director", "Andrew Lloyd Webber"], ["ongoing", 1], ["created_at", "2023-03-07 23:20:36.014659"], ["updated_at", "2023-03-07 23:20:36.014659"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduction Create (0.6ms)[0m  [1m[32mINSERT INTO "productions" ("title", "genre", "description", "budget", "image", "director", "ongoing", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Carmen"], ["genre", "Opera"], ["description", "Set in southern Spain this is the story of the downfall of Don José, a naïve soldier who is seduced by the wiles of the fiery and beautiful Carmen."], ["budget", 200000.0], ["image", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Prudent-Louis_Leray_-_Poster_for_the_premi%C3%A8re_of_Georges_Bizet%27s_Carmen.jpg/300px-Prudent-Louis_Leray_-_Poster_for_the_premi%C3%A8re_of_Georges_Bizet%27s_Carmen.jpg"], ["director", "Georges Bizet"], ["ongoing", 0], ["created_at", "2023-03-07 23:20:36.019838"], ["updated_at", "2023-03-07 23:20:36.019838"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProduction Create (0.5ms)[0m  [1m[32mINSERT INTO "productions" ("title", "genre", "description", "budget", "image", "director", "ongoing", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hamilton"], ["genre", "Musical"], ["description", "An American Musical is a sung-and-rapped-through musical by Lin-Manuel Miranda. It tells the story of American Founding Father Alexander Hamilton."], ["budget", 400000.0], ["image", "https://upload.wikimedia.org/wikipedia/en/thumb/8/83/Hamilton-poster.jpg/220px-Hamilton-poster.jpg"], ["director", "Lin-Manuel Miranda"], ["ongoing", 0], ["created_at", "2023-03-07 23:20:36.024539"], ["updated_at", "2023-03-07 23:20:36.024539"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2023-03-07 18:31:43 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shelbytalbert/.rvm/gems/ruby-2.7.4/gems/railties-6.1.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shelbytalbert/.rvm/gems/ruby-2.7.4/gems/railties-6.1.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.0ms | Allocations: 343)
+Completed 200 OK in 21ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 1832)
+
+
+Started GET "/hi" for ::1 at 2023-03-07 18:31:58 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/hi"):
+  
+Started GET "/welcome" for ::1 at 2023-03-07 18:32:29 -0500
+  
+SyntaxError (/Users/shelbytalbert/Development/110122/phase4/SENG-SCF-110122-Phase-4/02-client-server-communications/flatiron-theatre/app/controllers/application_controller.rb:4: syntax error, unexpected ':', expecting '}'
+    render { hello: "world" }
+                  ^
+/Users/shelbytalbert/Development/110122/phase4/SENG-SCF-110122-Phase-4/02-client-server-communications/flatiron-theatre/app/controllers/application_controller.rb:4: syntax error, unexpected '}', expecting `end'
+    render { hello: "world" }
+                            ^
+):
+  
+app/controllers/application_controller.rb:4: syntax error, unexpected ':', expecting '}'
+app/controllers/application_controller.rb:4: syntax error, unexpected '}', expecting `end'
+app/controllers/application_controller.rb:4: syntax error, unexpected ':', expecting '}'
+app/controllers/application_controller.rb:4: syntax error, unexpected '}', expecting `end'
+Started GET "/welcome" for ::1 at 2023-03-07 18:33:29 -0500
+  
+SyntaxError (/Users/shelbytalbert/Development/110122/phase4/SENG-SCF-110122-Phase-4/02-client-server-communications/flatiron-theatre/app/controllers/application_controller.rb:4: syntax error, unexpected ':', expecting '}'
+    render { hello: "world" }
+                  ^
+/Users/shelbytalbert/Development/110122/phase4/SENG-SCF-110122-Phase-4/02-client-server-communications/flatiron-theatre/app/controllers/application_controller.rb:4: syntax error, unexpected '}', expecting `end'
+    render { hello: "world" }
+                            ^
+):
+  
+app/controllers/application_controller.rb:4: syntax error, unexpected ':', expecting '}'
+app/controllers/application_controller.rb:4: syntax error, unexpected '}', expecting `end'
+app/controllers/application_controller.rb:4: syntax error, unexpected ':', expecting '}'
+app/controllers/application_controller.rb:4: syntax error, unexpected '}', expecting `end'
+Started GET "/welcome" for ::1 at 2023-03-07 18:33:35 -0500
+  
+SyntaxError (/Users/shelbytalbert/Development/110122/phase4/SENG-SCF-110122-Phase-4/02-client-server-communications/flatiron-theatre/app/controllers/application_controller.rb:4: syntax error, unexpected ':', expecting '}'
+    render { hello: "world" }
+                  ^
+/Users/shelbytalbert/Development/110122/phase4/SENG-SCF-110122-Phase-4/02-client-server-communications/flatiron-theatre/app/controllers/application_controller.rb:4: syntax error, unexpected '}', expecting `end'
+    render { hello: "world" }
+                            ^
+):
+  
+app/controllers/application_controller.rb:4: syntax error, unexpected ':', expecting '}'
+app/controllers/application_controller.rb:4: syntax error, unexpected '}', expecting `end'
+app/controllers/application_controller.rb:4: syntax error, unexpected ':', expecting '}'
+app/controllers/application_controller.rb:4: syntax error, unexpected '}', expecting `end'
+Started GET "/welcome" for ::1 at 2023-03-07 18:34:14 -0500
+Processing by ApplicationController#hi as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 141)
+
+
+Started GET "/welcome" for ::1 at 2023-03-07 18:48:41 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationController#hi as HTML
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 3325)
+
+
+Started GET "/productions" for ::1 at 2023-03-07 18:48:46 -0500
+Processing by ProductionsController#index as HTML
+  [1m[36mProduction Load (0.6ms)[0m  [1m[34mSELECT "productions".* FROM "productions"[0m
+  ↳ app/controllers/productions_controller.rb:4:in `index'
+Completed 200 OK in 34ms (Views: 29.8ms | ActiveRecord: 1.6ms | Allocations: 6772)
+
+
+Started GET "/productions/3" for ::1 at 2023-03-07 18:51:33 -0500
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduction Load (0.7ms)[0m  [1m[34mSELECT "productions".* FROM "productions" WHERE "productions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ (byebug):1:in `show'
+Completed 500 Internal Server Error in 158679ms (ActiveRecord: 1.8ms | Allocations: 165839)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/productions_controller.rb:9:in `show'
+Started GET "/productions" for ::1 at 2023-03-07 18:55:10 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductionsController#index as HTML
+  [1m[36mProduction Load (0.9ms)[0m  [1m[34mSELECT "productions".* FROM "productions"[0m
+  ↳ app/controllers/productions_controller.rb:4:in `index'
+Completed 202 Accepted in 28ms (Views: 13.2ms | ActiveRecord: 1.9ms | Allocations: 9964)
+
+
+Started GET "/productions" for ::1 at 2023-03-07 18:55:26 -0500
+Processing by ProductionsController#index as HTML
+  [1m[36mProduction Load (9.3ms)[0m  [1m[34mSELECT "productions".* FROM "productions"[0m
+  ↳ app/controllers/productions_controller.rb:4:in `index'
+Completed 202 Accepted in 12ms (Views: 2.6ms | ActiveRecord: 9.3ms | Allocations: 1227)
+
+
+Started GET "/productions/2" for ::1 at 2023-03-07 18:55:51 -0500
+Processing by ProductionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduction Load (0.5ms)[0m  [1m[34mSELECT "productions".* FROM "productions" WHERE "productions"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/productions_controller.rb:8:in `show'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 1198)
+
+
+Started GET "/productions" for ::1 at 2023-03-07 18:58:48 -0500
+Processing by ProductionsController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/productions_controller.rb:4:in `index'
+  [1m[36mProduction Load (0.2ms)[0m  [1m[34mSELECT "productions".* FROM "productions"[0m
+  ↳ app/controllers/productions_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 1.7ms | Allocations: 6522)
+
+
+Started POST "/productions" for ::1 at 2023-03-07 19:16:01 -0500
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductionsController#create as */*
+  Parameters: {"title"=>"Moulin Rouge", "genre"=>"musical", "director"=>"Baz Lurman", "description"=>"Musical Adaptation of the Movie", "budget"=>3000000.0, "image"=>"https://images.ctfassets.net/6pezt69ih962/5tfNvRGcNoGE95M5NucboG/89056af5ce3667d2eac68feabe5d45ba/MR-1200-121121.jpg?h=550&fm=jpg", "production"=>{"title"=>"Moulin Rouge", "genre"=>"musical", "description"=>"Musical Adaptation of the Movie", "budget"=>3000000.0, "image"=>"https://images.ctfassets.net/6pezt69ih962/5tfNvRGcNoGE95M5NucboG/89056af5ce3667d2eac68feabe5d45ba/MR-1200-121121.jpg?h=550&fm=jpg", "director"=>"Baz Lurman"}}
+Completed 204 No Content in 133546ms (ActiveRecord: 0.3ms | Allocations: 86351)
+
+
+Started POST "/productions" for ::1 at 2023-03-07 19:18:41 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductionsController#create as */*
+  Parameters: {"title"=>"Moulin Rouge", "genre"=>"musical", "director"=>"Baz Lurman", "description"=>"Musical Adaptation of the Movie", "budget"=>3000000.0, "image"=>"https://images.ctfassets.net/6pezt69ih962/5tfNvRGcNoGE95M5NucboG/89056af5ce3667d2eac68feabe5d45ba/MR-1200-121121.jpg?h=550&fm=jpg"}
+Completed 204 No Content in 105729ms (ActiveRecord: 0.7ms | Allocations: 70362)
+
+
+Started POST "/productions" for ::1 at 2023-03-07 19:28:27 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductionsController#create as */*
+  Parameters: {"title"=>"Moulin Rouge", "genre"=>"musical", "director"=>"Baz Lurman", "description"=>"Musical Adaptation of the Movie", "budget"=>3000000.0, "image"=>"https://images.ctfassets.net/6pezt69ih962/5tfNvRGcNoGE95M5NucboG/89056af5ce3667d2eac68feabe5d45ba/MR-1200-121121.jpg?h=550&fm=jpg", "ongoing"=>true, "x-rated"=>"naughty.img"}
+[31mUnpermitted parameter: :x-rated[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/productions_controller.rb:12:in `create'
+  [1m[36mProduction Create (5.8ms)[0m  [1m[32mINSERT INTO "productions" ("title", "genre", "description", "budget", "image", "director", "ongoing", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Moulin Rouge"], ["genre", "musical"], ["description", "Musical Adaptation of the Movie"], ["budget", 3000000.0], ["image", "https://images.ctfassets.net/6pezt69ih962/5tfNvRGcNoGE95M5NucboG/89056af5ce3667d2eac68feabe5d45ba/MR-1200-121121.jpg?h=550&fm=jpg"], ["director", "Baz Lurman"], ["ongoing", 1], ["created_at", "2023-03-08 00:28:27.339858"], ["updated_at", "2023-03-08 00:28:27.339858"]]
+  ↳ app/controllers/productions_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/productions_controller.rb:12:in `create'
+Completed 201 Created in 43ms (Views: 0.7ms | ActiveRecord: 9.6ms | Allocations: 10732)
+
+
+Started POST "/users" for ::1 at 2023-03-07 19:39:36 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"Shelby", "email"=>"shelby@me.com", "admin"=>true}
+[31mUnpermitted parameter: :admin[0m
+Completed 500 Internal Server Error in 306982ms (ActiveRecord: 0.0ms | Allocations: 61587)
+
+
+  
+NameError (uninitialized constant UsersController::User):
+  
+app/controllers/users_controller.rb:5:in `create'
+Started PATCH "/productions/6" for ::1 at 2023-03-07 19:48:38 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Error occurred while parsing request parameters.
+Contents:
+
+{
+
+"genre": "Baz Lurman musical", 
+
+}
+Processing by ProductionsController#update as */*
+Completed 400 Bad Request in 19ms (ActiveRecord: 0.0ms | Allocations: 3525)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (783: unexpected token at '{
+
+"genre": "Baz Lurman musical", 
+
+}'):
+  
+app/controllers/productions_controller.rb:16:in `update'
+Started PATCH "/productions/6" for ::1 at 2023-03-07 19:49:10 -0500
+Processing by ProductionsController#update as */*
+  Parameters: {"genre"=>"Baz Lurman musical", "id"=>"6"}
+  [1m[36mProduction Load (0.7ms)[0m  [1m[34mSELECT "productions".* FROM "productions" WHERE "productions"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/productions_controller.rb:16:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/productions_controller.rb:16:in `update'
+  [1m[36mProduction Update (9.6ms)[0m  [1m[33mUPDATE "productions" SET "genre" = ?, "updated_at" = ? WHERE "productions"."id" = ?[0m  [["genre", "Baz Lurman musical"], ["updated_at", "2023-03-08 00:49:10.065225"], ["id", 6]]
+  ↳ app/controllers/productions_controller.rb:16:in `update'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/productions_controller.rb:16:in `update'
+Completed 202 Accepted in 36ms (Views: 0.4ms | ActiveRecord: 12.8ms | Allocations: 8155)
+
+
+Started GET "/" for ::1 at 2023-03-07 19:49:22 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/shelbytalbert/.rvm/gems/ruby-2.7.4/gems/railties-6.1.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/shelbytalbert/.rvm/gems/ruby-2.7.4/gems/railties-6.1.7.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 13.2ms | Allocations: 343)
+Completed 200 OK in 26ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 1827)
+
+
+Started GET "/productions" for ::1 at 2023-03-07 19:49:25 -0500
+Processing by ProductionsController#index as HTML
+  [1m[36mProduction Load (0.5ms)[0m  [1m[34mSELECT "productions".* FROM "productions"[0m
+  ↳ app/controllers/productions_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms | Allocations: 1458)
+
+
+Started GET "/productions/6" for ::1 at 2023-03-07 19:49:27 -0500
+Processing by ProductionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduction Load (0.1ms)[0m  [1m[34mSELECT "productions".* FROM "productions" WHERE "productions"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/productions_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.1ms | Allocations: 618)
+
+
+Started PATCH "/productions/6" for ::1 at 2023-03-07 19:50:21 -0500
+Processing by ProductionsController#update as */*
+  Parameters: {"genre"=>"musical", "id"=>"6"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/productions_controller.rb:16:in `update'
+  [1m[36mProduction Load (0.3ms)[0m  [1m[34mSELECT "productions".* FROM "productions" WHERE "productions"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/productions_controller.rb:16:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/productions_controller.rb:17:in `update'
+  [1m[36mProduction Update (1.4ms)[0m  [1m[33mUPDATE "productions" SET "genre" = ?, "updated_at" = ? WHERE "productions"."id" = ?[0m  [["genre", "musical"], ["updated_at", "2023-03-08 00:50:21.214295"], ["id", 6]]
+  ↳ app/controllers/productions_controller.rb:17:in `update'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/productions_controller.rb:17:in `update'
+Completed 202 Accepted in 46ms (Views: 0.6ms | ActiveRecord: 6.3ms | Allocations: 7528)
+
+
+Started GET "/productions/6" for ::1 at 2023-03-07 19:51:05 -0500
+Processing by ProductionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduction Load (0.3ms)[0m  [1m[34mSELECT "productions".* FROM "productions" WHERE "productions"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/productions_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 636)
+
+
+Started DELETE "/productions/6" for ::1 at 2023-03-07 19:55:46 -0500
+Processing by ProductionsController#destroy as */*
+  Parameters: {"id"=>"6"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/productions_controller.rb:23:in `destroy'
+  [1m[36mProduction Load (0.4ms)[0m  [1m[34mSELECT "productions".* FROM "productions" WHERE "productions"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/productions_controller.rb:23:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/productions_controller.rb:24:in `destroy'
+  [1m[36mProduction Destroy (5.0ms)[0m  [1m[31mDELETE FROM "productions" WHERE "productions"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/productions_controller.rb:24:in `destroy'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/productions_controller.rb:24:in `destroy'
+Completed 204 No Content in 30ms (ActiveRecord: 8.2ms | Allocations: 7035)
+
+
+Started GET "/productions/6" for ::1 at 2023-03-07 19:56:04 -0500
+Processing by ProductionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduction Load (0.1ms)[0m  [1m[34mSELECT "productions".* FROM "productions" WHERE "productions"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/productions_controller.rb:8:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 469)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Production with 'id'=6):
+  
+app/controllers/productions_controller.rb:8:in `show'
+Started GET "/productions" for ::1 at 2023-03-07 19:57:26 -0500
+Processing by ProductionsController#index as HTML
+  [1m[36mProduction Load (0.7ms)[0m  [1m[34mSELECT "productions".* FROM "productions"[0m
+  ↳ app/controllers/productions_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms | Allocations: 1419)
+
+
