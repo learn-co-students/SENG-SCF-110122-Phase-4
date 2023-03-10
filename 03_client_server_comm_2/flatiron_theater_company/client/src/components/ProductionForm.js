@@ -11,7 +11,7 @@ function ProductionForm({addProduction}) {
     director:'',
     description:''
   })
-  const [errors, setErrors] = useState(null)
+  const [errors, setErrors] = useState([])
   const history = useHistory()
 
   const handleChange = (e) => {
@@ -36,8 +36,8 @@ function ProductionForm({addProduction}) {
       } else {
         //Display errors
         res.json().then(data => {
-          console.log(data.errors)
-          setErrors(Object.entries(data.errors).map((e) => `${e[0]}: ${e[1]}`))
+          console.log(data)
+          setErrors(Object.entries(data.messages).map((e) => `${e[0]}: ${e[1]}`))
         })
       }
     })

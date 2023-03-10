@@ -23,7 +23,7 @@ const Title = styled.h1`
     line-height: .8;
     transform: scale(.7, 1.4);
     
-    span{
+    span {
         color:#42ddf5;
     }
 `
