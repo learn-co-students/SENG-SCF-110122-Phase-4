@@ -39,6 +39,6 @@ class ProductionsController < ApplicationController
     end 
 
      def render_not_found(error)
-        render json: {errors: {error.model => "Not Found"}}, status: :not_found
+        render json: {error: {error.model => "Not Found"}}, status: :not_found
     end 
 end

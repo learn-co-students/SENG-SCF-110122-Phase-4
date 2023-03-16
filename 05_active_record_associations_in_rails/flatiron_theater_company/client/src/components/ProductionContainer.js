@@ -34,6 +34,6 @@ const Title = styled.h1`
 const CardContainer = styled.ul`
     display:flex;
     flex-direction:column;
-
+    list-style-type: none;
 `
 
