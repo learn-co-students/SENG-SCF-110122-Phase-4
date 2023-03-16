@@ -18,7 +18,7 @@ class ProductionsController < ApplicationController
 
     def update 
         production = Production.find(params[:id])
-        production.update!(production_params)
+        production.update(production_params)
         render json: production, status: :accepted
     end 
 
