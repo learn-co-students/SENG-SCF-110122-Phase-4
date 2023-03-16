@@ -12,6 +12,8 @@ import NotFound from './components/NotFound'
 function App() {
   const [productions, setProductions] = useState([])
   const [errors, setErrors] = useState(false)
+  // set a user id to one that exists in your database:
+  const [user, setUser] = useState(24)
 
 
   useEffect(() => {
@@ -44,7 +46,7 @@ function App() {
   return (
     <>
     <GlobalStyle />
-    <Navigation/>
+    <Navigation user={user}/>
       <Switch>
 
       <Route  path='/productions/new'>
@@ -56,7 +58,7 @@ function App() {
       </Route>
      
       <Route path='/productions/:id'>
-          <ProductionDetail deleteProduction={deleteProduction}/>
+          <ProductionDetail deleteProduction={deleteProduction} user={user}/>
       </Route>
 
       <Route path='/users/:id'>

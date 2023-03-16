@@ -1,11 +1,14 @@
 import  { Link, useParams, useHistory } from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import styled from 'styled-components'
+import NotFound from './NotFound'
 
-function ProductionDetail({deleteProduction}) {
+function ProductionDetail({deleteProduction, user}) {
   const [production, setProduction] = useState({})
   const [loading, setLoading] = useState(true)
   const [errors, setErrors] = useState(false)
+
+  console.log(errors)
   
   const params = useParams()
   const history = useHistory()
@@ -21,7 +24,6 @@ function ProductionDetail({deleteProduction}) {
           setLoading(false)
         })
       } else {
-        console.log('error')
         res.json().then(data => setErrors(data.error))
       }
     })
@@ -38,7 +40,7 @@ function ProductionDetail({deleteProduction}) {
         deleteProduction(id)
         history.push('/')
       } else {
-        res.json().then(data => setErrors(Object.entries(data.errors).map(e => `${e[0]} ${e[1]}`)))
+        res.json().then(data => setErrors(Object.entries(data.errors)))
       }
     })
   }
@@ -47,26 +49,27 @@ function ProductionDetail({deleteProduction}) {
     fetch(`/tickets`,{
       method:'POST',
       headers: {'Content-Type': 'application/json'},
-      body:JSON.stringify({production_id:id, user_id:1, price:30.50})
+      body:JSON.stringify({production_id:id, user_id:user, price:30.50})
     })
     .then(res => {
       if(res.ok){
-        history.push('/users/1')
+        history.push(`/users/${user}`)
       } else {
-        res.json().then(data => setErrors(Object.entries(data.errors).map(e => `${e[0]} ${e[1]}`)))
+        res.json().then(data => setErrors(Object.entries(data.errors)))
       }
     })
   }
   
  
+  if(errors.Production === 'Not Found') return <NotFound />
   if(loading) return <h1>Loading</h1>
-  if(errors) return <h1>{errors}</h1>
 
-  const {id, title, budget, genre, image,description} = production 
+  const {id, title, genre, image, description} = production 
  
   return (
       <CardDetail>
         <h1>{title}</h1>
+        {errors && errors.map(err => <li key={err[1]} style={{color: "red"}}>{`${err[0]}: ${err[1]}`}</li>)}
           <div className='wrapper'>
             <div>
               <h3>Genre:</h3>

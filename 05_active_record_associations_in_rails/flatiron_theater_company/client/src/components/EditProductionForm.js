@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 
 
@@ -14,6 +14,8 @@ function EditProductionForm({updateProduction}) {
   })
   const [errors, setErrors] = useState([])
   const {id} = useParams()
+  const history = useHistory()
+
   useEffect(() => {
     fetch(`/productions/${id}`)
     .then(res => res.json())
@@ -36,16 +38,19 @@ function EditProductionForm({updateProduction}) {
     })
     .then(res => {
       if(res.ok){
-        res.json().then(updateProduction)
+        res.json().then((data) => {
+          updateProduction(data)
+          alert("Congrats you have updated the production!")
+          history.push("/")
+        })
       } else {
         //Display errors
-        res.json().then(data => setErrors(Object.entries(data.errors).map(e => `${e[0]} ${e[1]}`)))
+        res.json().then(data => setErrors(Object.entries(data.errors)))
       }
     })
   }
     return (
       <div className='App'>
-      {errors?errors.map(e => <div>{e}</div>):null}
       <Form onSubmit={onSubmit}>
         <label>Title </label>
         <input type='text' name='title' value={formData.title} onChange={handleChange} />
@@ -67,7 +72,7 @@ function EditProductionForm({updateProduction}) {
       
         <input type='submit' value='Update Production' />
       </Form>
-      {errors?errors.map(e => <h2 style={{color:'red'}}>{e.toUpperCase()}</h2>):null}
+      {errors && errors.map((e,i) => <h2 style={{color:'red'}} key={i}>{e[0]}: {e[1]}</h2>)}
       </div>
     )
   }
