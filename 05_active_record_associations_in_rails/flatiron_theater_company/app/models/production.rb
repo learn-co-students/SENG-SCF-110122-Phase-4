@@ -1,4 +1,8 @@
 class Production < ApplicationRecord
+    has_many :cast_members
+    has_many :tickets
+    has_many :users, through: :tickets
+
     validates :title, :genre, :budget, :director, presence: true
     validates :title, uniqueness: true
     validates :budget, numericality: { greater_than: 0 }

@@ -12,8 +12,11 @@ function EditProductionForm({updateProduction}) {
     director:'',
     description:''
   })
-  const [errors, setErrors] = useState([])
-  const {id} = useParams()
+  const [errors, setErrors] = useState(null)
+
+  console.log("these are my form errors", errors)
+  
+  const { id } = useParams()
   const history = useHistory()
 
   useEffect(() => {
@@ -31,23 +34,26 @@ function EditProductionForm({updateProduction}) {
   function onSubmit(e){
     e.preventDefault()
     //PATCH to `/productions/${id}`
-    fetch(`/productions/${id}`,{
-      method:'PATCH',
-      headers: {'Content-Type': 'application/json'},
-      body:JSON.stringify(formData)
+    fetch(`/productions/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
     })
-    .then(res => {
-      if(res.ok){
-        res.json().then((data) => {
+    .then(resp => {
+      if(resp.ok) {
+        resp.json()
+        .then(data => {
           updateProduction(data)
-          alert("Congrats you have updated the production!")
           history.push("/")
         })
       } else {
-        //Display errors
-        res.json().then(data => setErrors(Object.entries(data.errors)))
+        resp.json()
+        .then(data => setErrors(Object.entries(data.errors)))
       }
     })
+
   }
     return (
       <div className='App'>
@@ -72,7 +78,7 @@ function EditProductionForm({updateProduction}) {
       
         <input type='submit' value='Update Production' />
       </Form>
-      {errors && errors.map((e,i) => <h2 style={{color:'red'}} key={i}>{e[0]}: {e[1]}</h2>)}
+      {errors ? errors.map((err, i) => <h3 key={i}>{`${err[0]}: ${err[1]}`}</h3>) : null}
       </div>
     )
   }

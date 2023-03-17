@@ -8,7 +8,7 @@ function ProductionDetail({deleteProduction, user}) {
   const [loading, setLoading] = useState(true)
   const [errors, setErrors] = useState(false)
 
-  console.log(errors)
+  
   
   const params = useParams()
   const history = useHistory()
@@ -64,7 +64,9 @@ function ProductionDetail({deleteProduction, user}) {
   if(errors.Production === 'Not Found') return <NotFound />
   if(loading) return <h1>Loading</h1>
 
-  const {id, title, genre, image, description} = production 
+  const {id, title, genre, image, description, cast_list} = production 
+
+  console.log(cast_list)
  
   return (
       <CardDetail>
@@ -76,9 +78,9 @@ function ProductionDetail({deleteProduction, user}) {
               <p>{genre}</p>
               <h3>Description:</h3>
               <p>{description}</p>
-              <h2>Crew Memebers</h2>
+              <h2>Crew Members</h2>
               <ul>
-                {/* cast_members here */}
+                {cast_list.map((cm, i) => <li key={i} style={{listStyleType: "none"}}>{cm}</li>)}
               </ul>
             </div>
             <img src={image}/>
