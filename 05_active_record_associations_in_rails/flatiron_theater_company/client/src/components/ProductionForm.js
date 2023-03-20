@@ -11,7 +11,9 @@ function ProductionForm({handlePost, addProduction}) {
     director:'',
     description:''
   })
-  const [errors, setErrors] = useState([])
+  const [errors, setErrors] = useState(null)
+
+  console.log(errors)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -31,11 +33,17 @@ function ProductionForm({handlePost, addProduction}) {
         res.json().then(addProduction)
       } else {
         //Display errors
-        res.json().then(data => setErrors(Object.entries(data.errors)))
+        res.json().then(data => setErrors(Object.entries(data.errors).flat()))
       }
     })
   }
-    return (
+
+  const renderErrors = (e) => {
+    const str = e.map((err, i) => i % 2 === 0 ? `${err}: ` : `${err} 🎭`)
+    return str.join(" ").toUpperCase()
+  }
+    
+  return (
       <div className='App'>
       <Form onSubmit={onSubmit}>
         <label>Title </label>
@@ -58,7 +66,7 @@ function ProductionForm({handlePost, addProduction}) {
       
         <input type='submit' value='Update Production' />
       </Form>
-      {errors && errors.map((e,i) => <h2 style={{color:'red'}} key={i}>{e[0]}: {e[1]}</h2>)}
+      {errors && <Div><h4>🎭 {renderErrors(errors)}</h4></Div>}
       </div>
     )
   }
@@ -81,4 +89,11 @@ function ProductionForm({handlePost, addProduction}) {
       margin-top:10px;
       margin-bottom:10px;
     }
+  `
+  const Div = styled.div`
+    width: 75%;
+    color: red;
+    margin: 25px auto;
+    letter-spacing: 2px;
+    line-height: 40px;
   `
