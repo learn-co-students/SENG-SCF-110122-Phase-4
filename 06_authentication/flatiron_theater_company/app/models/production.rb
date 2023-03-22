@@ -1,7 +1,7 @@
 class Production < ApplicationRecord
-    has_many :tickets
+    has_many :tickets, dependent: :destroy
     has_many :users, through: :tickets
-    has_many :cast_members
+    has_many :cast_members, dependent: :destroy
 
     validates :title, :genre, :budget, :director, presence: true
     validates :title, uniqueness: true
