@@ -50,7 +50,7 @@ function ProductionDetail({deleteProduction}) {
     })
     .then(res => {
       if(res.ok){
-        history.push(`/users/${userId}`)
+        history.push(`/users/${user}`)
       } else {
         res.json().then(data => setErrors(Object.entries(data.errors).map(e => `${e[0]} ${e[1]}`)))
       }

@@ -16,6 +16,10 @@ function Navigation() {
   textAlign: "center",
   cursor: "pointer",
 };
+
+const handleLogOut = () => {
+  // DELETE `/logout
+}
   
     return (
         <Nav> 
@@ -23,6 +27,7 @@ function Navigation() {
         <h1>Flatiron Theater Company</h1>
       </NavLink>
          <Menu>
+         <button onClick={handleLogOut}>Log Out</button>
            {!menu?
            <div onClick={() => setMenu(!menu)}>
              <GiHamburgerMenu size={30}/> 
@@ -76,5 +81,13 @@ const Menu = styled.div`
   ul{
     list-style:none;
   }
+  button{
+      background-color:#42ddf5;
+      color: white;
+      padding: 8px;
+      font-size: 1rem;
+      font-family:Arial;
+      margin:10px;
+    }
   
 `;
