@@ -17,7 +17,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [user, setUser] = useState(null);
 
-  console.log(productions);
+  console.log("productions:", productions);
 
   useEffect(() => {
     console.log("checking auth")
