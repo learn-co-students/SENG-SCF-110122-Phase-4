@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import {Link} from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
-function Navigation() {
+function Navigation({user, updateUser}) {
  const [menu, setMenu] = useState(false)
 
- const user = 1
+ const history = useHistory()
 
  const closeStyles = {
   marginBottom: 4,
@@ -18,7 +18,16 @@ function Navigation() {
 };
 
 const handleLogOut = () => {
-  // DELETE `/logout
+  // DELETE '/logout'
+  fetch('/logout', {
+    method: "DELETE"
+  })
+  .then(r => {
+    if(r.ok) {
+      updateUser(null)
+      history.push("/login")
+    }
+  })
 }
   
     return (
@@ -27,18 +36,18 @@ const handleLogOut = () => {
         <h1>Flatiron Theater Company</h1>
       </NavLink>
          <Menu>
-         <button onClick={handleLogOut}>Log Out</button>
+        {user ? <button onClick={handleLogOut}>Log Out</button> : null}
            {!menu?
            <div onClick={() => setMenu(!menu)}>
              <GiHamburgerMenu size={30}/> 
            </div>:
            <ul>
             <li onClick={() => setMenu(!menu)} style={closeStyles}>x</li>
-            <li><Link to={`/users/${user}`}>User Page</Link></li>
-            <li><Link to='/users/new'>Sign Up</Link></li>
-            <li><Link to='/login'>Login</Link></li>
-            <li><Link to='/productions/new'>New Production</Link></li>
-            <li><Link to='/'> Home</Link></li>
+           {user && <li><Link to={`/users/${user}`}>User Page</Link></li>}
+           {!user && <li><Link to='/users/new'>Sign Up</Link></li>}
+            {!user && <li><Link to='/login'>Login</Link></li>}
+           {user && <li><Link to='/productions/new'>New Production</Link></li>}
+            {user && <li><Link to='/'> Home</Link></li>}
            </ul>
            }
          </Menu>
