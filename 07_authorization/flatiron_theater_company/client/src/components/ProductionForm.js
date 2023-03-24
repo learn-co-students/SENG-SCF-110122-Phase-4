@@ -1,7 +1,6 @@
 import React, { useState} from 'react'
 import { useHistory } from 'react-router-dom'
-import {Form} from '../styled/Form'
-import styled from 'styled-components'
+import {Form, ERR_DIV} from '../styled/Form'
 
 
 function ProductionForm({addProduction}) {
@@ -14,7 +13,7 @@ function ProductionForm({addProduction}) {
     description:''
   })
   const [errors, setErrors] = useState(null)
-
+console.log("new form errors: ", errors)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -45,7 +44,7 @@ function ProductionForm({addProduction}) {
   }
   
   const renderErrors = (e) => {
-    const str = e.map((err, i) => i % 2 === 0 ? `${err}: ` : `${err} 🎭`)
+    const str = e.map((err, i) => i % 2 === 0 ? `${err}: ` : `${err} 🎭 `)
     return str.join(" ").toUpperCase()
   }
 
@@ -72,19 +71,10 @@ function ProductionForm({addProduction}) {
       
         <input type='submit' value='Update Production' />
       </Form>
-      {errors && <Div><h4>🎭 {renderErrors(errors)}</h4></Div>}
+      {errors && <ERR_DIV><h4>🎭 {renderErrors(errors)}</h4></ERR_DIV>}
       </div>
     )
   }
   
   export default ProductionForm
-
-
-const Div = styled.div`
-width: 75%;
-color: red;
-margin: 25px auto;
-letter-spacing: 2px;
-line-height: 40px;
-`
 

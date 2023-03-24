@@ -17,3 +17,12 @@ input[type=submit]{
   margin-bottom:10px;
 }
 `
+
+export const ERR_DIV = styled.div`
+  text-align: center;
+  color: red;
+  font-style: italic;
+  font-size: 20px;
+  margin-top: 15px;
+  text-transform: uppercase;
+`;

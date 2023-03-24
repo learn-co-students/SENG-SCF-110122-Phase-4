@@ -4,6 +4,8 @@ import ProductionCard from './ProductionCard'
 
 function ProductionContainer({productions}) {
 
+    if(!productions.length) return <div>Loading...</div>
+
     return (
      <div>
          <Title><span>F</span>latIron Theater <span>C</span>ompany</Title>

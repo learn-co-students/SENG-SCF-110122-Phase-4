@@ -17,25 +17,30 @@ function App() {
   const [cart, setCart] = useState([]);
   const [user, setUser] = useState(null);
 
-  console.log(user);
+  console.log(productions);
 
   useEffect(() => {
-
-    fetch("/auth")
-    .then(r => {
-      if(r.ok) {
-        r.json().then(data => setUser(data))
-      }
-    })
-
-    fetch("/productions").then((res) => {
-      if (res.ok) {
-        res.json().then(setProductions);
-      } else {
-        res.json().then((data) => setErrors(data.error));
-      }
+    console.log("checking auth")
+    fetch("/auth").then((r) => {
+      if (r.ok) r.json().then((data) => setUser(data))
     });
   }, []);
+
+  const fetchProductions = async () => {
+    const resp = await fetch("/productions");
+    if (resp.ok) {
+      const result = await resp.json();
+      setProductions(result);
+    } else {
+      const errors = await resp.json();
+      setErrors(errors.errors);
+    }
+  };
+
+  useEffect(() => {
+    fetchProductions();
+    console.log("productions fetched!")
+  }, [user])
 
   const addProduction = (production) =>
     setProductions((current) => [...current, production]);
@@ -62,7 +67,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Navigation cart={cart} user={user} updateUser={updateUser}/>
+      <Navigation cart={cart} user={user} updateUser={updateUser} />
 
       {!user ? (
         <Switch>
@@ -71,9 +76,6 @@ function App() {
           </Route>
           <Route path="/users/new">
             <SignUp />
-          </Route>
-          <Route>
-            <NotFound />
           </Route>
         </Switch>
       ) : (

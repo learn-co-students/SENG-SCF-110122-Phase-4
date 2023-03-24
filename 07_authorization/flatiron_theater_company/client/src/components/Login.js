@@ -1,61 +1,59 @@
-import React, {useState} from 'react'
-import {useHistory} from 'react-router-dom'
-import {Form} from '../styled/Form'
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { Form, ERR_DIV } from "../styled/Form";
 
-function Login({updateUser}) {
-    const [formData, setFormData] = useState({
-        name:'',
-        password:''
-    })
-    const [errors, setErrors] = useState([])
-    const history = useHistory()
+function Login({ updateUser }) {
+  const [formData, setFormData] = useState({
+    name: "",
+    password: "",
+  });
+  const [errors, setErrors] = useState([]);
+  const history = useHistory();
 
-    const {name, password} = formData
+  const { name, password } = formData;
 
-    function onSubmit(e){
-        e.preventDefault()
-       
-        fetch(`/login`,{
-          method:'POST',
-          headers:{'Content-Type': 'application/json'},
-          body:JSON.stringify(formData)
-        })
-        .then(res => {
-            if(res.ok){
-                res.json().then(user => {
-                    updateUser(user)
-                    history.push(`/users/${user.id}`)
-                })
-            }else {
-                res.json().then(json => setErrors(Object.entries(json.errors)))
-            }
-        })
-       
-    }
+  function onSubmit(e) {
+    e.preventDefault();
 
-    const handleChange = (e) => {
-        const { name, value } = e.target
-        setFormData({ ...formData, [name]: value })
+    fetch(`/login`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    }).then((res) => {
+      if (res.ok) {
+        res.json().then((user) => {
+          updateUser(user);
+          history.push(`/users/${user.id}`);
+        });
+      } else {
+        res.json().then((err) => setErrors(err.errors));
       }
-    return (
-        <> 
-        <Form onSubmit={onSubmit}>
-        <label>
-          Username
-          </label>
-        <input type='text' name='name' value={name} onChange={handleChange} />
-      
-        <label>
-         Password
-         </label>
-        <input type='password' name='password' value={password} onChange={handleChange} />
-       
-       
-        <input type='submit' value='Log in!' />
+    });
+  }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  return (
+    <>
+      <Form onSubmit={onSubmit}>
+        <label>Username</label>
+        <input type="text" name="name" value={name} onChange={handleChange} />
+
+        <label>Password</label>
+        <input
+          type="password"
+          name="password"
+          value={password}
+          onChange={handleChange}
+        />
+
+        <input type="submit" value="Log in!" />
       </Form>
-      {errors?errors.map(e => <div>{e[0]+': ' + e[1]}</div>):null}
-        </>
-    )
+      {errors ? <ERR_DIV>{errors}</ERR_DIV> : null}
+    </>
+  );
 }
 
-export default Login
+export default Login;

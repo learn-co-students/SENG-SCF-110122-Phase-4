@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {useHistory} from 'react-router-dom'
-import {Form} from '../styled/Form'
+import {Form, ERR_DIV} from '../styled/Form'
 
 function SignUp() {
     const [formData, setFormData] = useState({
@@ -29,7 +29,7 @@ function SignUp() {
         .then(res => {
             if(res.ok){
                 res.json().then(user => {
-                    history.push(`/users/${user.id}`)
+                    history.push("/login")
                 })
             }else {
                 res.json().then(json => setErrors(Object.entries(json.errors)))
@@ -63,7 +63,7 @@ function SignUp() {
        
         <input type='submit' value='Sign up!' />
       </Form>
-      {errors?errors.map(e => <div>{e[0]+': ' + e[1]}</div>):null}
+      {errors?errors.map((e,i) => <ERR_DIV key={i}>{e[0]+': ' + e[1]}</ERR_DIV>):null}
         </>
     )
 }

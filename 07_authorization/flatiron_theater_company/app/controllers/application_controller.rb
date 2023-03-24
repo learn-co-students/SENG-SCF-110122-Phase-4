@@ -13,6 +13,7 @@ class ApplicationController < ActionController::API
     end
 
     def authorized_user
+        puts "calling authorized_user!".red
         render json: { error: "Not Authorized" }, status: :unauthorized unless current_user
     end
 

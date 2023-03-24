@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import { useParams, useHistory } from 'react-router-dom'
-import {Form} from '../styled/Form'
+import {Form, ERR_DIV} from '../styled/Form'
 
 function EditProductionForm({updateProduction}) {
   const [formData, setFormData] = useState({
@@ -19,6 +19,8 @@ function EditProductionForm({updateProduction}) {
     .then(res => res.json())
     .then(setFormData)
   },[])
+
+  console.log(errors)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -67,7 +69,7 @@ function EditProductionForm({updateProduction}) {
       
         <input type='submit' value='Update Production' />
       </Form>
-      {errors && errors.map((e,i) => <h2 style={{color:'red'}} key={i}>{e[0]}: {e[1]}</h2>)}
+      {errors && errors.map((e,i) => <ERR_DIV key={i}>{e[0]}: {Array.isArray(e[1]) ? e[1].join(", ") : e[1]}</ERR_DIV>)}
       </div>
     )
   }
